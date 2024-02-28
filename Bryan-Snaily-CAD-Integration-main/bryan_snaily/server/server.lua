@@ -29,7 +29,7 @@ InsertNewCitizen = function(firstname, lastname, birthdate, gender, ethnicity, h
         return
     end
 
-    PerformHttpRequest(string.format('%sadmin/import/citizens', Config.API.URL),
+    PerformHttpRequest(string.format('%sadmin/import/citizens', URLNormalize(Config.API.URL)),
         function(errorCode, resultData, resultHeaders, errorData)
             if (errorCode ~= 200) then
                 if errorCode == 404 then
@@ -69,7 +69,7 @@ InsertNewWeapon = function(weaponHash, firstname, lastname)
         return
     end
 
-    PerformHttpRequest(string.format('%sadmin/import/weapons', Config.API.URL),
+    PerformHttpRequest(string.format('%sadmin/import/weapons', URLNormalize(Config.API.URL)),
         function(errorCode, resultData, resultHeaders, errorData)
             if (errorCode ~= 200) then
                 if errorCode == 404 then
@@ -114,7 +114,7 @@ InsertNewVehicle = function(plate, vehicleHash, firstname, lastname, color)
         return
     end
 
-    PerformHttpRequest(string.format('%sadmin/import/vehicles', Config.API.URL),
+    PerformHttpRequest(string.format('%sadmin/import/vehicles', URLNormalize(Config.API.URL)),
         function(errorCode, resultData, resultHeaders, errorData)
             if (errorCode ~= 200) then
                 if errorCode == 404 then
@@ -158,7 +158,7 @@ SetLicenseToCitizen = function(license, value, firstname, lastname)
         return
     end
 
-    PerformHttpRequest(string.format('%ssearch/actions/licenses/%s', Config.API.URL, citizenId),
+    PerformHttpRequest(string.format('%ssearch/actions/licenses/%s', URLNormalize(Config.API.URL), citizenId),
         function(errorCode, resultData, resultHeaders, errorData)
             if (errorCode ~= 200) then
                 if errorCode == 404 then
@@ -310,7 +310,7 @@ GetValueId = function(table, value, columnToCheck)
     local awaitingResponse = true
     local valueId
 
-    PerformHttpRequest(string.format('%sadmin/values/%s', Config.API.URL, table),
+    PerformHttpRequest(string.format('%sadmin/values/%s', URLNormalize(Config.API.URL), table),
         function(errorCode, resultData, resultHeaders, errorData)
             if (errorCode ~= 200) then
                 if errorCode == 404 then
@@ -360,7 +360,8 @@ GetCitizenId = function(firstname, lastname)
         error('[Error] Lastname is required', 2)
     end
 
-    PerformHttpRequest(string.format('%sadmin/manage/citizens?query=%s+%s', Config.API.URL, firstname, lastname),
+    PerformHttpRequest(
+        string.format('%sadmin/manage/citizens?query=%s+%s', URLNormalize(Config.API.URL), firstname, lastname),
         function(errorCode, resultData, resultHeaders, errorData)
             if (errorCode ~= 200) then
                 if errorCode == 404 then
