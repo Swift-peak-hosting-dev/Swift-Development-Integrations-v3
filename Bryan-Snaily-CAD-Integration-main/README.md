@@ -1,4 +1,4 @@
-# V3 Coming soon 
+# V3 0.1
 
 # Bryan Snaily CAD Integration for QB Core or ESX 
 
