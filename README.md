@@ -8,7 +8,4 @@ Bryan Snaily CAD Integration The documentation for this project can be found [he
 
 ## Additional Resources
 
-- [Coming soon ][burnout-QB radio-Integration](http://www.example.com/link2)
-- [Coming Soon][kristian770-FivePD Integration-](http://www.example.com/link2)
-- [Coming Soon](http://www.example.com/link4)
-- [Coming Soon](http://www.example.com/link5)
+https://github.com/Swift-peak-hosting-dev
