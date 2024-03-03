@@ -4,7 +4,7 @@ This repository hosts the documentation for the Bryan Snaily CAD Integration pro
 
 ## Documentation
 
-The documentation for this project can be found [here](https://swift-peak-hosting-dev.gitbook.io/swift-peak-hosting-dev-docs/).
+Bryan Snaily CAD Integration The documentation for this project can be found [here ](https://swift-peak-hosting-dev.gitbook.io/swift-peak-hosting-dev-docs/).
 
 ## Additional Resources
 
