@@ -127,9 +127,9 @@ InsertNewVehicle = function(plate, vehicleHash, firstname, lastname, color)
             end
         end,
         'POST',
-        json.encode({
+        '[' .. json.encode(
             formatedTable
-        }),
+        ) .. ']',
         {
             [Config.API.TOKEN_HEADER_NAME] = Config.API.TOKEN,
             ['Content-Type'] = 'application/json',
